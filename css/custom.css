@@ -1,8 +1,3 @@
-body {
-   width:1000px;
-   margin:0 auto;
-}
-
 #cssmenu,
 #cssmenu ul,
 #cssmenu li,
@@ -151,9 +146,7 @@ body {
   background: -moz-linear-gradient(top, #3c3c3c 0%, #222222 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c3c3c), color-stop(100%, #222222));
   background: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-  background: -o-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-  background: -ms-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-  background: linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background: linear-gradient(#3c3c3c 0%, #222222 100%);
 }
 #cssmenu > ul > li > a:hover {
   background: #080808;
