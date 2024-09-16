@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-latest.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>ISVC 2024: Contrastive Loss based on Contextual Similarity for Image Classification</title>
+        <style>
+            .text {
+                text-align: justify;
+            }
+        </style>
+    </head>
+
+    <body>
+    <h1><b>Unsupervised Effectiveness Estimation Measure Based on Rank Correlation for Image Retrieval</b></h1>
+
+    <h4><b>Authors: Thiago César Castilho Almeida, <a href="https://lucasvalem.com" target="_blank">Lucas Pascotti Valem</a>, <a href="https://www.ic.unicamp.br/~dcarlos/" target="_blank">Daniel Carlos Guimarães Pedronette</a></b></h4>
+
+    <h4><b>In 19th International Symposium on Visual Computing (<a href="https://isvc.net" target="_blank">ISVC 2024</a>), Lake Tahoe, NV, USA</b></h4>
+
+    <p class="text">
+        <b>Abstract:</b> In recent years, the amount of image data has increased exponentially, driven by advancements in digital technologies. As the volume of data expands, the efforts required for labeling also escalate, which is costly and time-consuming.
+        This scenario highlights the critical need for methods capable of delivering effective results in scenarios with few or no labels at all.
+        In unsupervised retrieval, the task of Query Performance Prediction (QPP) is crucial and challenging, as it involves estimating the effectiveness of a query without labeled data.
+        Besides promising, the QPP approaches are still largely unexplored for image retrieval.
+        Additionally, recent approaches require training and do not exploit rank correlation to model the data.
+        To address this gap, we propose a novel QPP measure named Accumulated JaccardMax, which considers contextual similarity information and innovates by exploiting a recent rank correlation measure to assess the effectiveness of ranked lists.
+        It provides a robust estimation by analyzing the ranked lists in different neighborhood depths and does not require any training or labeled data.
+        Extensive experiments were conducted across 5 datasets and over 20 different features including hand-crafted (e.g., color, shape, texture) and deep learning (e.g., Convolutional Networks and Vision Transformers) models.
+        The results reveal that the proposed unsupervised measure exhibits a high correlation with the Mean Average Precision (MAP) in most cases, achieving results that are better or comparable to the baseline approaches in the literature.
+    </p>
+
+    <h4><b>Supplementary Files:</b></h4>
+
+    <p class="text">
+        You can access the supplementary material PDF, which includes comprehensive results and detailed illustrations.
+        The code for our proposed approach is also available for download through GitHub.
+    </p>
+
+    <center>
+        <a href="content/supmat_accjacmax.pdf" target="_blank" class="btn btn-primary btn-xl"><b>Supplementary Material (PDF)</b></a>&nbsp;&nbsp;
+        <a href="https://github.com/lucasPV/AccJacMax" target="_blank" class="btn btn-success btn-xl"><b>Code Available (GitHub)</b></a>&nbsp;&nbsp;
+    </center>
+    </body>
+
+    <br>
+
+    <h4><b>Citation:</b></h4>
+    <p>
+        If you use this work, please cite it as follows:
+    </p>
+    <pre>
+    @inproceedings{Almeida2024AccJacMax,
+      author    = {Thiago César Castilho Almeida and Lucas Pascotti Valem and Daniel Carlos Guimarães Pedronette},
+      title     = {Unsupervised Effectiveness Estimation Measure Based on Rank Correlation for Image Retrieval},
+      booktitle = {19th International Symposium on Visual Computing (ISVC)},
+      year      = {2024},
+      address   = {Lake Tahoe, NV, USA},
+    }</pre>
+    </body>
+
+</html>

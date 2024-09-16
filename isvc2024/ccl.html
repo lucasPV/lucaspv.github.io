@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-latest.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>ISVC 2024: Contrastive Loss based on Contextual Similarity for Image Classification</title>
+        <style>
+            .text {
+                text-align: justify;
+            }
+        </style>
+    </head>
+
+    <body>
+    <h1><b>Contrastive Loss based on Contextual Similarity for Image Classification</b></h1>
+
+    <h4><b>Authors: <a href="https://lucasvalem.com" target="_blank">Lucas Pascotti Valem</a>, <a href="https://www.ic.unicamp.br/~dcarlos/" target="_blank">Daniel Carlos Guimarães Pedronette</a>, <a href="http://w3.uqo.ca/allimo01/" target="_blank">Mohand Said Allili</a></b></h4>
+
+    <h4><b>In 19th International Symposium on Visual Computing (<a href="https://isvc.net" target="_blank">ISVC 2024</a>), Lake Tahoe, NV, USA</b></h4>
+
+    <p class="text">
+        <b>Abstract:</b> Contrastive learning has been extensively exploited in self-supervised and supervised learning due to its effectiveness in learning representations that
+        distinguish between similar and dissimilar images. It offers a robust alternative to cross-entropy by yielding more semantically meaningful image embeddings.
+        However, most contrastive losses rely on pairwise measures to assess the similarity between elements, ignoring more general neighborhood information that can be
+        leveraged to enhance model robustness and generalization. In this paper, we propose the Contextual Contrastive Loss (CCL) to replace pairwise image comparison by
+        introducing a new contextual similarity measure using neighboring elements. The CCL yields a more semantically meaningful image embedding ensuring better separability
+        of classes in the latent space. Experimental evaluation on three datasets (Food101, MiniImageNet, and CIFAR-100) has shown that CCL yields superior results by achieving
+        up to 10.76% relative gains in classification accuracy,  particularly for fewer training epochs and limited training data. This demonstrates the potential of our approach,
+        especially in resource-constrained scenarios.
+    </p>
+
+    <h4><b>Supplementary Files:</b></h4>
+
+    <p class="text">
+        You can access the supplementary material PDF, which includes comprehensive results and detailed illustrations.
+        The code for our proposed approach is also available for download through GitHub.
+    </p>
+
+    <center>
+        <a href="content/supmat_ccl.pdf" target="_blank" class="btn btn-primary btn-xl"><b>Supplementary Material (PDF)</b></a>&nbsp;&nbsp;
+        <a href="https://github.com/lucasPV/CCL" target="_blank" class="btn btn-success btn-xl"><b>Code Available (GitHub)</b></a>&nbsp;&nbsp;
+    </center>
+    </body>
+
+    <br>
+
+    <h4><b>Citation:</b></h4>
+    <p>
+        If you use this work, please cite it as follows:
+    </p>
+    <pre>
+    @inproceedings{Valem2024CCL,
+      author    = {Lucas Pascotti Valem and Daniel Carlos Guimarães Pedronette and Mohand Said Allili},
+      title     = {Contrastive Loss based on Contextual Similarity for Image Classification},
+      booktitle = {19th International Symposium on Visual Computing (ISVC)},
+      year      = {2024},
+      address   = {Lake Tahoe, NV, USA},
+    }</pre>
+    </body>
+
+</html>
