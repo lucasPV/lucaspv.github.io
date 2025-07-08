@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aulas de Informática para a Terceira Idade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .pdf-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .pdf-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .pdf-item h3 {
+      margin: 10px;
+      font-size: 1.1em;
+    }
+    .pdf-item .pdf-preview {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+    .pdf-item .pdf-link {
+      display: block;
+      padding: 10px;
+      text-align: center;
+      background: #007acc;
+      color: #fff;
+      text-decoration: none;
+      border-top: 1px solid #005fa3;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+    .pdf-item .pdf-link:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aulas de Informática para a Terceira Idade</h1>
+  <div class="pdf-gallery">
+    <!-- Repita este bloco para cada aula -->
+    <div class="pdf-item">
+      <iframe src="aulas/aula1.pdf" class="pdf-preview"></iframe>
+      <h3>Aula 1: Primeiros Passos</h3>
+      <a href="aulas/aula1.pdf" target="_blank" class="pdf-link">Abrir PDF</a>
+    </div>
+    <div class="pdf-item">
+      <iframe src="aulas/aula2.pdf" class="pdf-preview"></iframe>
+      <h3>Aula 2: Sistema Operacional e Área de Trabalho</h3>
+      <a href="aulas/aula2.pdf" target="_blank" class="pdf-link">Abrir PDF</a>
+    </div>
+    <div class="pdf-item">
+      <iframe src="aulas/aula3.pdf" class="pdf-preview"></iframe>
+      <h3>Aula 3: Digitação e Editor de Texto</h3>
+      <a href="aulas/aula3.pdf" target="_blank" class="pdf-link">Abrir PDF</a>
+    </div>
+    <div class="pdf-item">
+      <iframe src="aulas/aula4.pdf" class="pdf-preview"></iframe>
+      <h3>Aula 4: Conhecendo a Internet e Buscando Conteúdo</h3>
+      <a href="aulas/aula4.pdf" target="_blank" class="pdf-link">Abrir PDF</a>
+    </div>
+    <div class="pdf-item">
+      <iframe src="aulas/aula5.pdf" class="pdf-preview"></iframe>
+      <h3>Aula 5: Whatsapp e Comunicação Digital</h3>
+      <a href="aulas/aula5.pdf" target="_blank" class="pdf-link">Abrir PDF</a>
+    </div>
+    <div class="pdf-item">
+      <iframe src="aulas/aula6.pdf" class="pdf-preview"></iframe>
+      <h3>Aula 6: E-mail</h3>
+      <a href="aulas/aula6.pdf" target="_blank" class="pdf-link">Abrir PDF</a>
+    </div>
+    <div class="pdf-item">
+      <iframe src="aulas/aula7.pdf" class="pdf-preview"></iframe>
+      <h3>Aula 7: Fotos e Memórias Digitais</h3>
+      <a href="aulas/aula7.pdf" target="_blank" class="pdf-link">Abrir PDF</a>
+    </div>
+    <div class="pdf-item">
+      <iframe src="aulas/aula8.pdf" class="pdf-preview"></iframe>
+      <h3>Aula 8: Planilhas e Excel</h3>
+      <a href="aulas/aula8.pdf" target="_blank" class="pdf-link">Abrir PDF</a>
+    </div>
+    <div class="pdf-item">
+      <iframe src="aulas/aula9.pdf" class="pdf-preview"></iframe>
+      <h3>Aula 9: Fakenews e Segurança na Internet</h3>
+      <a href="aulas/aula9.pdf" target="_blank" class="pdf-link">Abrir PDF</a>
+    </div>
+    <!-- Fim do bloco de aulas -->
+  </div>
+</body>
+</html>
+
