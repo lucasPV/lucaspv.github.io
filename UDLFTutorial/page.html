@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UDLF Tutorial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #111827;
+      --card: #0b1220;
+      --primary: #60a5fa;
+      --primary-strong: #3b82f6;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --ring: rgba(96,165,250,.6);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --primary: #2563eb;
+        --primary-strong: #1d4ed8;
+        --text: #0f172a;
+        --muted: #475569;
+        --ring: rgba(37,99,235,.25);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(59,130,246,.15), transparent 60%),
+                  radial-gradient(1000px 700px at 110% 10%, rgba(99,102,241,.12), transparent 50%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      padding: 32px 0 8px;
+      display: grid;
+      gap: 12px;
+      align-items: center;
+      justify-items: start;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(99,102,241,.12);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .3px;
+      border: 1px solid rgba(99,102,241,.25);
+    }
+    .badges{display:flex;flex-wrap:wrap;gap:8px}
+    .badge.alt{background: rgba(37,99,235,.16); border-color: rgba(37,99,235,.35);}
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 42px);
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 6px 0 0 0;
+      color: var(--muted);
+      font-size: clamp(14px, 2.4vw, 18px);
+      max-width: 68ch;
+    }
+    .grid {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 16px;
+    }
+    @media (min-width: 700px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .card {
+      position: relative;
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) , var(--card);
+      border: 1px solid rgba(148,163,184,.15);
+      padding: 18px 18px 18px 18px;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: 0 6px 24px rgba(2,6,23,.25);
+      min-height: 110px;
+    }
+    .card:focus-within, .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--ring);
+      box-shadow: 0 10px 36px rgba(2,6,23,.35);
+    }
+    .card-content { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+    .icon {
+      width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; flex: none;
+      background: radial-gradient(60% 60% at 30% 30%, rgba(96,165,250,.35), transparent), rgba(99,102,241,.12);
+      border: 1px solid rgba(99,102,241,.25);
+    }
+    .title { font-weight: 700; font-size: 16px; margin: 2px 0 2px; }
+    .desc { color: var(--muted); font-size: 14px; margin: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .btn {
+      appearance: none;
+      border: 1px solid rgba(99,102,241,.25);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 2px 10px rgba(2,6,23,.2);
+      transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(2,6,23,.28); border-color: var(--ring); }
+    .btn.primary { background: linear-gradient(180deg, var(--primary), var(--primary-strong)); color: white; border-color: transparent; }
+    .footer {
+      margin: 32px 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .meta{display:grid;gap:8px;margin-top:6px}.authors,.affiliations{margin:0;color:var(--muted);font-size:14px}.authors sup,.affiliations sup{font-weight:700;color:var(--text)}.affiliations{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badges"><span class="badge" aria-hidden="true">UDLF Tutorial</span><span class="badge alt" aria-label="Conference">SIBGRAPI 2025</span></div>
+      <h1>Rank Based Unsupervised Similarity Learning: Framework and Applications</h1>
+      <p class="subtitle">All resources in one place. Use the cards to open slides, code, and demos. Enjoy!</p>
+      <div class="meta">
+        <p class="authors">
+          <span>Italo M. Saldanha<sup>1</sup>, Vinicius A. S. Kawai<sup>2</sup>, Bionda Rozin<sup>2</sup>, Gustavo R. Leticio<sup>2</sup>, Prof. Dr. Lucas Pascotti Valem<sup>1</sup>, <br>Prof. Dr. Daniel C. G. Pedronette<sup>2</sup></span>
+        </p>
+        <p class="affiliations">
+          <span><sup>1</sup> Universidade de São Paulo (USP), São Carlos, SP, Brazil</span><br/>
+          <span><sup>2</sup> Universidade Estadual Paulista (UNESP), Rio Claro, SP, Brazil</span>
+        </p>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Resource links">
+      <!-- Tutorial Paper -->
+      <article class="card" tabindex="0">
+        <div class="card-content">
+          <div class="icon" aria-hidden="true">
+            <!-- document icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7 3h6l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M13 3v4h4" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="title">Tutorial Paper and Presentation</div>
+            <p class="desc">Full reference text for the tutorial and slides.</p>
+            <div class="actions">
+              <a class="btn primary" href="http://sibgrapi.sid.inpe.br/col/sid.inpe.br/sibgrapi/2025/09.14.22.49/doc/thisInformationItemHomePage.html" target="_blank" rel="noopener">Read Paper</a>
+              <a class="btn primary" href="https://drive.google.com/file/d/1BrxUTGQAcnQm9GW4oXdNuDcKBFFsYOAN/view?usp=sharing" target="_blank" rel="noopener">Open Presentation</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- UDLF page -->
+      <article class="card" tabindex="0">
+        <div class="card-content">
+          <div class="icon" aria-hidden="true">
+            <!-- globe icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M2 12h20M12 2c3 3.5 3 16.5 0 20M12 2c-3 3.5-3 16.5 0 20" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="title">UDLF</div>
+            <p class="desc">UDLF official repository.</p>
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/UDLF/UDLF/releases/" target="_blank" rel="noopener">Check Releases</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- UDLF Web demo and source -->
+      <article class="card" tabindex="0">
+        <div class="card-content">
+          <div class="icon" aria-hidden="true">
+            <!-- monitor icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 21h8M12 16v5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="title">UDLF Web</div>
+            <p class="desc">Open the live demo and browse the source code of the UDLF Web interface currently under development.</p>
+            <div class="actions">
+              <a class="btn primary" href="https://udlf-web.vercel.app/" target="_blank" rel="noopener">Open Demo</a>
+              <a class="btn primary" href="https://github.com/itMatos/udlf-web-front-and-api" target="_blank" rel="noopener">Github Repo</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PyUDLF source -->
+      <article class="card" tabindex="0">
+        <div class="card-content">
+          <div class="icon" aria-hidden="true">
+            <!-- code icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M9 18 4 12l5-6M15 6l5 6-5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="title">PyUDLF source</div>
+            <p class="desc">Python wrapper for UDLF. Run UDLF code directly from Python without requiring C/C++ code.</p>
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/UDLF/pyUDLF" target="_blank" rel="noopener">GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Google Colabs -->
+      <article class="card" tabindex="0">
+        <div class="card-content">
+          <div class="icon" aria-hidden="true">
+            <!-- lab flask icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M9 3h6M10 3v5.5L4.9 17.2A3 3 0 0 0 7.5 22h9a3 3 0 0 0 2.6-4.8L14 8.5V3" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="12" cy="14" r="1" fill="currentColor"/>
+              <circle cx="9.5" cy="17" r="1" fill="currentColor"/>
+              <circle cx="14.5" cy="17.5" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <div class="title">Google Colabs</div>
+            <p class="desc">Run examples in the browser with easy setup and documented instructions.</p>
+            <div class="actions">
+              <a class="btn primary" href="https://drive.google.com/drive/folders/1LXxfiT20bfuxXHl8-P4FLrEX46MC_AeO?usp=sharing" target="_blank" rel="noopener">Check the Colabs</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Dataset files -->
+      <article class="card" tabindex="0">
+        <div class="card-content">
+          <div class="icon" aria-hidden="true">
+            <!-- download icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 10l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 20h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="title">Dataset Files</div>
+            <p class="desc">Download all files required by UDLF, including images, features, ranked lists, and other associated files.</p>
+            <div class="actions">
+              <a class="btn primary" href="https://drive.google.com/drive/folders/1mKPEi0S6XwZsMFHuvIXPl3zMLOCNUJb1?usp=sharing">Download Files</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <p class="footer">© Copyright 2025 All rights reserved to the authors.</p>
+  </div>
+</body>
+</html>
