@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-latest.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>WTAG / SBBD 2026: A Coreset Selection Framework with Ensemble Aggregation for Image Classification</title>
+        <style>
+            .text {
+                text-align: justify;
+            }
+        </style>
+    </head>
+
+    <body>
+    <h1><b>A Coreset Selection Framework with Ensemble Aggregation for Image Classification</b></h1>
+
+    <h4><b>Authors: Pedro Rocha Dantas, <a href="https://lucasvalem.com" target="_blank">Lucas Pascotti Valem</a></b></h4>
+    <h4>Institute of Mathematics and Computer Science (ICMC) - University of São Paulo (USP)</h4>
+
+    <br>
+    <h4><b>In VII Workshop on Undergraduate Student Papers (<a href="https://sbbd.org.br/2026/wtag/" target="_blank">WTAG</a>), held at the Brazilian Symposium on Databases (<a href="https://sbbd.org.br/2026/" target="_blank">SBBD 2026</a>), São Carlos, SP, Brazil</b></h4>
+
+    <p class="text">
+        <b>Abstract:</b> The rapid growth of image data has produced large-scale datasets, raising concerns about the time and memory costs of model training. Selecting representative training subsets, however, remains challenging: individual sample contributions are unclear, and model behavior varies across datasets and runs. We address these challenges with a framework that combines coreset selection with an ensemble aggregation over multiple runs. For coreset selection, we propose SCOre-Stratified Selection (SCOSS), which partitions the training data into intervals based on a chosen score and samples from each interval. The ensemble combines predictions from multiple runs, each performed on an independently sampled training subset. As baselines, we use moderate and random selection, each in original and class-balanced versions. We assess the framework with Simple Graph Convolution (SGC) and Support Vector Machine (SVM) classifiers under different sampling ratios. Experiments show that SCOSS is competitive with baselines, often the best choice for SGC, and enables favorable accuracy-efficiency trade-offs. On fine-grained datasets, SGC with SCOSS outperforms SVMs when using fewer labeled samples.
+    </p>
+
+    <h4><b>Supplementary Files:</b></h4>
+
+    <p class="text">
+        You can access the supplementary material PDF.
+        The code for our proposed approach is also available for download through GitHub.
+    </p>
+
+    <center>
+        <a href="content/supmat_scoss.pdf" target="_blank" class="btn btn-primary btn-xl"><b>Supplementary Material (PDF)</b></a>&nbsp;&nbsp;
+        <a href="https://github.com/PedroRochaDantas/SCOSS" target="_blank" class="btn btn-success btn-xl"><b>Code Available (GitHub)</b></a>&nbsp;&nbsp;
+    </center>
+
+    <br>
+
+    <h4><b>Citation:</b></h4>
+    <p>
+        If you use this work, please cite it as follows:
+    </p>
+    <pre>
+    @inproceedings{Dantas2026SCOSS,
+      author    = {Pedro Rocha Dantas and Lucas Pascotti Valem},
+      title     = {A Coreset Selection Framework with Ensemble Aggregation for Image Classification},
+      booktitle = {Anais Estendidos do XLI Simpósio Brasileiro de Banco de Dados (SBBD) -- VII Workshop de Trabalhos de Alunos de Graduação (WTAG)},
+      year      = {2026},
+      address   = {São Carlos, SP, Brazil},
+      publisher = {SBC},
+    }</pre>
+    </body>
+
+</html>
