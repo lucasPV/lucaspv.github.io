@@ -12,6 +12,31 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/custom.css">
         <title>Publications - Lucas Pascotti Valem</title>
+        <style>
+            .publication-list > li {
+                margin-bottom: 24px;
+            }
+            ol.publication-list > li::marker {
+                font-weight: bold;
+            }
+            /* Publication buttons */
+            a.btn.btn-xs {
+                padding: 4px 10px;
+                border-radius: 6px;
+                text-decoration: none;
+                line-height: 1.5;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
+                transition: box-shadow .15s ease, filter .15s ease;
+            }
+            a.btn.btn-xs:hover {
+                filter: brightness(.94);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+            }
+            a.btn.btn-xs:focus-visible {
+                outline: 2px solid #245580;
+                outline-offset: 2px;
+            }
+        </style>
     </head>
     <body>
         <div style="text-align:center">
@@ -35,248 +60,529 @@
         <div style="width: 95%; overflow: hidden; margin-left: 25px;">
             <h3><b>Publications</b></h3>
             <h4><b>Theses and Dissertations:</b></h4>
-            <ul>
+            <ul class="publication-list" style="list-style-type: disc;">
             <li>
                 <p><b>VALEM, L. P.</b> Contextual Similarity Learning for Image Retrieval and Classification: Applications in Person Re-identification. <b>PhD Dissertation</b>, São Paulo State University (Unesp), 2024.
                     <br>
-                    <a href="content/dissertations/phd.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Full Text</b></a>&nbsp;&nbsp;
-                    <a href="content/dissertations/phd.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
+                    <a href="content/dissertations/phd.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Full Text</b></a>&nbsp;&nbsp;
+                    <a href="content/dissertations/phd.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
                 </p>
             </li>
             <li>
                 <p><b>VALEM, L. P.</b> Combinação Seletiva Não Supervisionada de Listas Ranqueadas Aplicada à Busca de Imagens pelo Conteúdo. <b>Master's Thesis</b>, São Paulo State University (Unesp), 2019.
                     <br>
-                    <a href="content/dissertations/masters.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Full Text</b></a>&nbsp;&nbsp;
-                    <a href="content/dissertations/masters.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
+                    <a href="content/dissertations/masters.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Full Text</b></a>&nbsp;&nbsp;
+                    <a href="content/dissertations/masters.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
                 </p>
             </li>
             </ul>
             <h4><b>Journal Papers:</b></h4>
-            <ul>
+            <ol class="publication-list" style="list-style-type: decimal;">
+                <li>
+                    <p>TORRENTE, P. O.; PAULO, D. G.; <b>VALEM, L. P.</b>; YAN, J.; TETILA, E. C.; BARBEDO, J. G. A.; ZHAO, L. UAV-Based Computer Vision for Cattle Detection and Feed Bunk Spatial Analysis. In: <b>IEEE Transactions on AgriFood Electronics</b>; 2026. <b>Accepted for publication.</b>
+                    </p>
+                </li>
+                <li>
+                    <p>KAWAI, V. A. S.; LETICIO, G. R.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Aggregating Neighbor Embedding Projection and Rank-Based Manifold Learning for Image Retrieval. In: <b>Journal of the Brazilian Computer Society</b>; 2026.
+                        <br>
+                        <a href="https://doi.org/10.5753/jbcs.2026.5685" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/ViniciusAtsushi/Manifold-Rank-Fusion" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>BRITO, G. M.; DUARTE, R. M.; <b>VALEM, L. P.</b> Rank Correlation Graphs with Mutual Neighborhood Weighting for Graph Convolutional Networks in Image Classification. In: <b>Pattern Recognition Letters</b>; 2026.
+                        <br>
+                        <a href="https://doi.org/10.1016/j.patrec.2026.09.012" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/Bagiel1/DGCGplus" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>GAPSKI, M. C. B.; KAWAI, V. A. S.; LETICIO, G. R.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G.; ALLILI, M. S. Graph Neural Networks for Semi-Supervised Image Classification with Multi-Feature Aggregation. In: <b>Journal of the Brazilian Computer Society</b>; 2026.
+                        <br>
+                        <a href="https://doi.org/10.5753/jbcs.2026.5880" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/marinachagasbg/gnn-multifeature-fusion" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>YAN, J.; TETILA, E. C.; ZHAO, L.; GONÇALVES, R. C.; CASTANHEIRO, L. F.; <b>VALEM, L. P.</b>; BARBEDO, J. G. A. Deep learning-based UAV framework for automated morphological and growth analysis of feedlot cattle. In: <b>Computers and Electronics in Agriculture</b>; 2026.
+                        <br>
+                        <a href="https://doi.org/10.1016/j.compag.2026.111559" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>BARBEDO, J. G. A.; DA SILVA, M. S.; CAZZOLATO, M. T.; <b>VALEM, L. P.</b>; TINÓS, R.; ROMERO, R. A. F.; MURTA, L. O.; DE JESUS HOLANDA, A.; FELIPE, J. C.; PINHEIRO, J. B.; CHAGAS, J. T. B.; DA SILVA, R. F.; TETILA, E. C.; DE CASTRO JORGE, L. A.; YUAN, H.; LI, W.; KOTECHA, K.; ZHAO, L. Explainability and privacy in AI-enabled crop monitoring: Trends and future directions in soybean research. In: <b>Computers and Electronics in Agriculture</b>; 2026.
+                        <br>
+                        <a href="https://doi.org/10.1016/j.compag.2025.111392" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>BIOTTO, D. W.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G.; SALVADEO, D. H. P. Transduction to induction: Unsupervised representation learning based on rank information. In: <b>Neurocomputing</b>; 2025.
+                        <br>
+                        <a href="https://doi.org/10.1016/j.neucom.2025.131010" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>KAWAI, V. S.; <b>VALEM, L. P.</b>; BALDASSIN, A.; BORIN, E.; PEDRONETTE, D. C. G.; LATECKI, L. J. Rank-based Hashing for Effective and Efficient Nearest Neighbor Search for Image Retrieval. In: <b>ACM Transactions on Multimedia Computing, Communications, and Applications</b>; 2024.
+                        <br>
+                        <a href="https://doi.org/10.1145/3659580" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/ViniciusAtsushi/Rank-Based-Hashing" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>PRESOTTO, J. G. C.; <b>VALEM, L. P.</b>; DE SÁ, N. G.; PEDRONETTE, D. C. G.; PAPA, J. P. Weakly supervised classification through manifold learning and rank-based contextual measures. In: <b>Neurocomputing</b>; 2024.
+                        <br>
+                        <a href="https://doi.org/10.1016/j.neucom.2024.127717" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>LETICIO, G. R.; KAWAI, V. S.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G.; DA S. TORRES, R. Manifold information through neighbor embedding projection for image retrieval. In: <b>Pattern Recognition Letters</b>; 2024.
+                        <br>
+                        <a href="https://doi.org/10.1016/j.patrec.2024.04.022" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>PEREIRA-FERRERO, V. H.; LEWIS, T. G.; <b>VALEM, L. P.</b>; FERRERO, L. G. P.; PEDRONETTE, D. C. G.; LATECKI, L. J. Unsupervised affinity learning based on manifold analysis for image retrieval: A survey. In: <b>Computer Science Review</b>; 2024.
+                        <br>
+                        <a href="https://doi.org/10.1016/j.cosrev.2024.100657" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>PEREIRA-FERRERO, V. H.; <b>VALEM, L. P.</b>; LETICIO, G. R.; PEDRONETTE, D. C. G. Feature Fusion and Augmentation Based on Manifold Ranking for Image Classification. In: <b>International Journal of Semantic Computing</b>; 2024.
+                        <br>
+                        <a href="https://doi.org/10.1142/S1793351X24440033" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
                 <li>
                     <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. ; LATECKI, L. J. . Rank Flow Embedding for Unsupervised and Semi-Supervised Manifold Learning. In: <b>IEEE Transactions on Image Processing (TIP)</b>; 2023.
                         <br>
-                        <a href="content/papers/journals/tip_2023.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1109/TIP.2023.3268868" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF/UDLF/" target="_blank" class="btn btn-success btn-xs"><b>Download Code</b></a>
+                        <a href="content/papers/journals/tip_2023.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1109/TIP.2023.3268868" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/UDLF/UDLF/" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. ; LATECKI, L. J. . Graph Convolutional Networks based on Manifold Learning for Semi-Supervised Image Classification. In: <b>Computer Vision and Image Understanding</b>; 2023.
                         <br>
-                        <a href="content/papers/journals/cviu_2023.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1016/j.cviu.2022.103618" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/journals/cviu_2023.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1016/j.cviu.2022.103618" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                    </p>
+                </li>
+                <li>
+                    <p>DOS SANTOS, CLAUDIO; OLIVEIRA, D.; PASSOS, L., PIRES, R.; SANTOS, D. F.; <b>VALEM, L. P.</b> ; MOREIRA, T. P.; SANTANA, M. C.; RODER, M.; PAPA, J. P.; COLOMBO, D. . Gait Recognition Based on Deep Learning: A Survey. In: <b>ACM Computing Surveys</b>; v. 55, 2023.
+                        <br>
+                        <a href="https://arxiv.org/pdf/2201.03323.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://dl.acm.org/doi/10.1145/3490235" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                    </p>
+                </li>
+                <li>
+                    <p>PEREIRA-FERRERO, V. H.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Feature augmentation based on manifold ranking and LSTM for image classification. In: <b>Expert Systems with Applications</b>; 2023.
+                        <br>
+                        <a href="https://doi.org/10.1016/j.eswa.2022.118995" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/vanessaferrero/LSTM" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. . Person Re-ID through unsupervised hypergraph rank selection and fusion. In: <b>Journal of Image and Vision Computing</b>; 2022.
                         <br>
-                        <a href="content/papers/journals/imavis_2022.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1016/j.imavis.2022.104473" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/journals/imavis_2022.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1016/j.imavis.2022.104473" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
                     </p>
                 </li>
-               <li>
+                <li>
                     <p>DE FERNANDO, F. A. ; PEDRONETTE, D. C. G. ; DE SOUSA, G. J. ; <b>VALEM, L. P.</b> ; GUILHERME, I. R. . RaDE+: A semantic rank-based graph embedding algorithm. In: <b>International Journal of Information Management Data Insights</b>; v. 2, no. 1, 2022.
                         <br>
-                        <a href="https://www.sciencedirect.com/science/article/pii/S2667096822000210/pdfft?md5=4c18610daf5d0d94e770b6e2e5adb8a2&pid=1-s2.0-S2667096822000210-main.pdf" target="_blank" class="btn btn-primary btn-xs"><b>PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1016/j.jjimei.2022.100078" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2667096822000210/pdfft?md5=4c18610daf5d0d94e770b6e2e5adb8a2&pid=1-s2.0-S2667096822000210-main.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1016/j.jjimei.2022.100078" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/thcastilho/interpretable-embeddings" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
-                    <p>DOS SANTOS, CLAUDIO; OLIVEIRA, D.; PASSOS, L., PIRES, R.; SANTOS, D. F.; <b>VALEM, L. P.</b> ; MOREIRA, T. P.; SANTANA, M. C.; RODER, M.; PAPA, J. P.; COLOMBO, D. . Gait Recognition Based on Deep Learning: A Survey. In: <b>ACM Computing Surveys</b>; v. 55, 2022.
+                    <p>PRESOTTO, J. G. C.; DOS SANTOS, S. F.; <b>VALEM, L. P.</b>; FARIA, F. A.; PAPA, J. P.; ALMEIDA, J.; PEDRONETTE, D. C. G. Weakly supervised learning based on hypergraph manifold ranking. In: <b>Journal of Visual Communication and Image Representation</b>; 2022.
                         <br>
-                        <a href="https://arxiv.org/pdf/2201.03323.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://dl.acm.org/doi/10.1145/3490235" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                    </p>
-                </li>
-                <li>
-                    <p>PEDRONETTE, D. C. G. ; <b>VALEM, L. P.</b> ; LATECKI, L. J. . Efficient Rank-Based Diffusion Process with Assured Convergence. In: <b>Journal of Imaging</b>; v. 7, no. 3, p. 49, 2021.
-                        <br>
-                        <a href="https://www.mdpi.com/2313-433X/7/3/49/pdf" target="_blank" class="btn btn-primary btn-xs"><b>PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.3390/jimaging7030049" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/journals/jimaging-v07-i03_20210912.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF/UDLF/" target="_blank" class="btn btn-success btn-xs"><b>Download Code</b></a>
+                        <a href="https://doi.org/10.1016/j.jvcir.2022.103666" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
                 <li>
                     <p>PEDRONETTE, D. C. G. ; <b>VALEM, L. P.</b> ; TORRES, R. S. . A BFS-Tree of Ranking References for Unsupervised Manifold Learning. In: <b>Pattern Recognition</b>; v. 111, p. 107666, 2021.
                         <br>
-                        <a href="content/papers/journals/PR-BFSTRee_2021.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1016/j.patcog.2020.107666" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/journals/PR-BFSTRee_2021.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF/UDLF/" target="_blank" class="btn btn-success btn-xs"><b>Download Code</b></a>
+                        <a href="content/papers/journals/PR-BFSTRee_2021.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107666" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/journals/PR-BFSTRee_2021.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/UDLF/UDLF/" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>PEDRONETTE, D. C. G. ; <b>VALEM, L. P.</b> ; LATECKI, L. J. . Efficient Rank-Based Diffusion Process with Assured Convergence. In: <b>Journal of Imaging</b>; v. 7, no. 3, p. 49, 2021.
+                        <br>
+                        <a href="https://www.mdpi.com/2313-433X/7/3/49/pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.3390/jimaging7030049" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/journals/jimaging-v07-i03_20210912.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/UDLF/UDLF/" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. . Graph-based selective rank fusion for unsupervised image retrieval. In: <b>Pattern Recognition Letters</b>; v. 135, p. 82-89, 2020.
                         <br>
-                        <a href="https://doi.org/10.1016/j.patrec.2020.03.032" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>
+                        <a href="https://doi.org/10.1016/j.patrec.2020.03.032" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
                 <li>
                     <p>PISANI. F; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. ; TORRES, R. S. ; BORIN, E. ; BRETERNITZ JR., M. . A unified model for accelerating unsupervised iterative re-ranking algorithms. In: <b>Concurrency and Computation: Practice and Experience</b>; v. 32, p. e5702, 2020.
                         <br>
-                        <a href="https://doi.org/10.1002/cpe.5702" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>
+                        <a href="https://doi.org/10.1002/cpe.5702" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
                 <li>
-                    <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . Unsupervised Selective Rank Fusion for Image Retrieval Tasks. In: <b>Neurocomputing</b>; v. 377, p. 182-199, 2019.
+                    <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . Unsupervised Selective Rank Fusion for Image Retrieval Tasks. In: <b>Neurocomputing</b>; v. 377, p. 182-199, 2020.
                         <br>
-                        <a href="content/papers/journals/paperUSRF.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1016/j.neucom.2019.09.065" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/journals/paperUSRF.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF/USRF/" target="_blank" class="btn btn-success btn-xs"><b>Download Code</b></a>
+                        <a href="content/papers/journals/paperUSRF.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1016/j.neucom.2019.09.065" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/journals/paperUSRF.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/UDLF/USRF/" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
                     <p>PEDRONETTE, D. C. G. ; <b>VALEM, L. P.</b> ; ALMEIDA, J.; TORRES, R. S. . Multimedia Retrieval Through Unsupervised Hypergraph-Based Manifold Ranking. In: IEEE Transactions on Image Processing (<b>TIP</b>); v. 28, p. 5824–5838, 2019.
                         <br>
-                        <a href="content/papers/journals/TIP-2019.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="http://doi.org/10.1109/TIP.2019.2920526" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF/UDLF/releases/tag/v1.20" target="_blank" class="btn btn-success btn-xs"><b>Download Code</b></a>
+                        <a href="content/papers/journals/TIP-2019.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1109/TIP.2019.2920526" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/UDLF/UDLF/releases/tag/v1.20" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L. P.</b> ; DE OLIVEIRA C. R. ; PEDRONETTE, D. C. G. ; ALMEIDA, J. . Unsupervised Similarity Learning through Rank Correlation and kNN Sets. In: The <b>ACM</b> Transactions on Multimedia Computing, Communications, and Applications (<b>TOMM</b>); 2018.
                         <br>
-                        <a href="https://doi.org/10.1145/3241053" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>
+                        <a href="https://doi.org/10.1145/3241053" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
                 <li>
-                    <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. ; ALMEIDA, J. . Unsupervised Similarity Learning through Cartesian Product of Ranking References for Image Retrieval Tasks. In: Pattern Recognition Letters (<b>PRL</b>); 2017.
+                    <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. ; ALMEIDA, J. . Unsupervised Similarity Learning through Cartesian Product of Ranking References for Image Retrieval Tasks. In: Pattern Recognition Letters (<b>PRL</b>); 2018.
                         <br>
-                        <a href="https://doi.org/10.1016/j.patrec.2017.10.013" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>
+                        <a href="https://doi.org/10.1016/j.patrec.2017.10.013" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
-            </ul>
+            
+            </ol>
             <h4><b>Conference Papers:</b></h4>
-            <ul>
+            <ol class="publication-list" style="list-style-type: decimal;">
                 <li>
-                    <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G.; Allili, M. S. . Contrastive Loss based on Contextual Similarity for Image Classification. In: In 19th International Symposium on Visual Computing (<b>ISVC</b>), 2024, Lake Tahoe, NV, USA.
+                    <p>BEZERRA, I. H. C.; TRIVEDY, V.; <b>VALEM, L. P.</b>; LATECKI, L. J. Region-Aware CLS Token Augmentation for Fine-Grained Image Retrieval. In: <b>39th SIBGRAPI Conference on Graphics, Patterns and Images</b>; 2026.
                         <br>
-                        <a href="content/papers/conferences/ISVC-2024_CCL.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/ISVC-2024_CCL.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="isvc2024/ccl.html" target="_blank" class="btn btn-success btn-xs"><b>Supplementary Material + Code</b></a>
+                        <b><span aria-hidden="true">🏅</span> Honorable Mention</b>
+                        <br>
+                        <a href="https://sibgrapi.sid.inpe.br/col/sid.inpe.br/sibgrapi%4080/2007/08.02.16.22/doc/mirrorget.cgi?choice=fullrefer&amp;continue=no&amp;index=0&amp;languagebutton=en&amp;lastupdate=2026%3A09.04.04.05.51+sid.inpe.br%2Fbanon%2F2001%2F03.30.15.38+lucas%40icmc.usp.br+%7BD+2026%7D&amp;metadatarepository=sid.inpe.br%2Fsibgrapi%2F2026%2F09.04.04.05.51&amp;serveraddress=sibgrapi.sid.inpe.br+802" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/IdhcbIan/Augmenting_CLS_with_ROI_tokens" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
-                    <p>ALMEIDA, T. C. C. <b>VALEM L. P.</b>; PEDRONETTE, D. C. G. . Unsupervised Effectiveness Estimation Measure Based on Rank Correlation for Image Retrieval. In: In 19th International Symposium on Visual Computing (<b>ISVC</b>), 2024, Lake Tahoe, NV, USA.
+                    <p>DUARTE, R. M.; BRITO, G. M.; <b>VALEM, L. P.</b> Rank Correlation Meets Gaussian Degree Normalization in GNNs for Image Classification. In: <b>39th SIBGRAPI Conference on Graphics, Patterns and Images</b>; 2026.
                         <br>
-                        <a href="content/papers/conferences/ISVC-2024_ACCJACMAX.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/ISVC-2024_ACCJACMAX.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="isvc2024/accjacmax.html" target="_blank" class="btn btn-success btn-xs"><b>Supplementary Material + Code</b></a>
+                        <a href="https://sibgrapi.sid.inpe.br/col/sid.inpe.br/sibgrapi/2026/09.04.04.10/doc/duarte-64-inpe.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/rduarte12/SIBGRAPI-2026-DGRANDE" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>PAULO, D. G.; <b>VALEM, L. P.</b> Rethinking Image Graphs for GCNs: Beyond Similarity with Diversity. In: <b>39th SIBGRAPI Conference on Graphics, Patterns and Images</b>; 2026.
+                        <br>
+                        <a href="https://sibgrapi.sid.inpe.br/col/sid.inpe.br/sibgrapi/2026/09.04.03.59/doc/giaretta-53-inpe.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/Didiles/brid-g" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>BENATO, B.; <b>VALEM, L. P.</b>; BRITO, G. M.; BEZERRA, I. H. C.; DUARTE, R. M.; NONATO, L. G. An Introduction to Graph Neural Networks in Computer Vision: A Practical Perspective. In: <b>39th SIBGRAPI Conference on Graphics, Patterns and Images</b>; 2026.
+                        <br>
+                        <a href="https://sibgrapi.sid.inpe.br/cover/sid.inpe.br/sibgrapi/2026/09.04.04.16/Cover?languagebutton=en&amp;metadatarepository=sid.inpe.br%2Fsibgrapi%2F2026%2F09.04.04.16.25&amp;requiredmirror=sid.inpe.br%2Fsibgrapi%4080%2F2007%2F08.02.16.22" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>DUARTE, R. M.; PONCIANO, J. R.; <b>VALEM, L. P.</b> Gaussian Rank-Based Neighborhood Degree for Graph Neural Networks in Image Classification. In: <b>Brazilian Symposium on Databases (SBBD)</b>; 2026.
+                        <br>
+                        <a href="https://doi.org/10.5753/sbbd.2026.249260" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/rduarte12/SBBD-2026_GRaNDe" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>PAULO, D. G.; <b>VALEM, L. P.</b> Diversidade na Construção de Vizinhanças para Redes Convolucionais de Grafos em Classificação de Imagens. In: <b>Workshop de Teses e Dissertações em Bancos de Dados (WTDBD / SBBD)</b>; 2026.
+                        <br>
+                        <a href="https://doi.org/10.5753/sbbd_estendido.2026.249487" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>DANTAS, P. R.; <b>VALEM, L. P.</b> A Coreset Selection Framework with Ensemble Aggregation for Image Classification. In: <b>Workshop de Trabalhos de Alunos de Graduação (WTAG / SBBD)</b>; 2026.
+                        <br>
+                        <b><span aria-hidden="true">🥇</span> Best Paper Award</b>
+                        <br>
+                        <a href="https://sol.sbc.org.br/index.php/sbbd_estendido/article/view/44107" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/PedroRochaDantas/SCOSS" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>MAGALHAES, C. P.; <b>VALEM, L. P.</b> Integrating Large Language Models and Graph Convolutional Networks for Semi-Supervised Image Classification. In: <b>Workshop de Trabalhos de Alunos de Graduação (WTAG / SBBD)</b>; 2026.
+                        <br>
+                        <b><span aria-hidden="true">🏅</span> Honorable Mention</b>
+                        <br>
+                        <a href="https://sol.sbc.org.br/index.php/sbbd_estendido/article/view/44105" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/Dr-Verdin/llm-gcn-semisupervised-image-classification" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>CARVALHO, V. D. D.; REIS, L. P. D. S.; SILVA, M. F. L. D.; INDALÉCIO, C. L.; RODRIGUES, K. R. D. H.; <b>VALEM, L. P.</b> Informática para Terceira Idade - Socialização e Inclusão Digital do Público Idoso. In: <b>Anais Estendidos do XXXI Simpósio Brasileiro de Sistemas Multimídia e Web (WebMedia)</b>; 2025.
+                        <br>
+                        <a href="https://sol.sbc.org.br/index.php/webmedia_estendido/article/view/38203" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>BRITO, G. M.; <b>VALEM, L. P.</b> Density-Guided Rank Correlation Graphs for Graph Convolutional Networks in Image Classification. In: <b>38th SIBGRAPI Conference on Graphics, Patterns and Images</b>; 2025.
+                        <br>
+                        <b><span aria-hidden="true">🥇</span> Best Paper Award</b>
+                        <br>
+                        <a href="https://doi.org/10.1109/sibgrapi67909.2025.11223391" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/Bagiel1/DGCG" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>DE MATOS SALDANHA, I.; KAWAI, V. A. S.; ROZIN, B.; LETICIO, G. R.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Rank-Based Unsupervised Similarity Learning: Framework and Applications. In: <b>38th SIBGRAPI Conference on Graphics, Patterns and Images (Tutorials)</b>; 2025.
+                        <br>
+                        <a href="https://doi.org/10.1109/sibgrapi67909.2025.11223278" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>ALMEIDA, T. C. C.; LETICIO, G.; <b>VALEM, L. P.</b>; FREITAS, A. N.; PEDRONETTE, D. C. G. Effective Graph and Rank-based Contextual Embeddings for Textual and Multimedia Data. In: <b>IEEE International Joint Conference on Neural Networks (IJCNN)</b>; 2025.
+                        <br>
+                        <a href="https://doi.org/10.1109/IJCNN64981.2025.11229362" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/thcastilho/interpretable-embeddings" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>LETICIO, G.; KAWAI, V. A. S.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Neighbor Embedding Projection and Graph Convolutional Networks for Image Classification. In: <b>20th International Conference on Computer Vision Theory and Applications (VISAPP)</b>; 2025.
+                        <br>
+                        <a href="https://doi.org/10.5220/0013260500003912" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>LETICIO, G.; SANTOS, M. H. J.; <b>VALEM, L. P.</b>; KAWAI, V. A. S.; BREVE, F.; PEDRONETTE, D. C. G. Graph Convolutional Networks and Particle Competition and Cooperation for Semi-Supervised Learning. In: <b>20th International Conference on Computer Vision Theory and Applications (VISAPP)</b>; 2025.
+                        <br>
+                        <a href="https://doi.org/10.5220/0013267000003912" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>LETICIO, G. R.; KAWAI, V. A. S.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Graph Convolutional Networks Based on Aggregated Multilevel kNN Graph for Image Classification. In: <b>38th SIBGRAPI Conference on Graphics, Patterns and Images</b>; 2025.
+                        <br>
+                        <a href="https://doi.org/10.1109/SIBGRAPI67909.2025.11223400" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>GAPSKI, M. C. B.; <b>VALEM, L. P.</b>; GUIMARÃES PEDRONETTE, D. C. Feature Fusion for Graph Convolutional Networks in Semi-Supervised Image Classification. In: <b>37th SIBGRAPI Conference on Graphics, Patterns and Images</b>; 2024.
+                        <br>
+                        <a href="https://doi.org/10.1109/sibgrapi62404.2024.10716341" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>KAWAI, V. A. S.; LETICIO, G. R.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Neighbor Embedding Projection and Rank-Based Manifold Learning for Image Retrieval. In: <b>37th SIBGRAPI Conference on Graphics, Patterns and Images</b>; 2024.
+                        <br>
+                        <a href="https://doi.org/10.1109/sibgrapi62404.2024.10716269" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>LOPES, L. T.; <b>VALEM, L. P.</b>; GUIMARAES PEDRONETTE, D. C. Self-Supervised Image Re-Ranking based on Hypergraphs and Graph Convolutional Networks. In: <b>37th SIBGRAPI Conference on Graphics, Patterns and Images</b>; 2024.
+                        <br>
+                        <a href="https://doi.org/10.1109/SIBGRAPI62404.2024.10716321" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G.; Allili, M. S. . Contrastive Loss based on Contextual Similarity for Image Classification. In: 19th International Symposium on Visual Computing (<b>ISVC</b>), 2024, Lake Tahoe, NV, USA.
+                        <br>
+                        <a href="https://doi.org/10.1007/978-3-031-77392-1_5" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/ISVC-2024_CCL.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/ISVC-2024_CCL.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="isvc2024/ccl.html" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">📦</span> Supplementary Material + Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>ALMEIDA, T. C. C. <b>VALEM L. P.</b>; PEDRONETTE, D. C. G. . Unsupervised Effectiveness Estimation Measure Based on Rank Correlation for Image Retrieval. In: 19th International Symposium on Visual Computing (<b>ISVC</b>), 2024, Lake Tahoe, NV, USA.
+                        <br>
+                        <a href="https://doi.org/10.1007/978-3-031-77389-1_4" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/ISVC-2024_ACCJACMAX.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/ISVC-2024_ACCJACMAX.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="isvc2024/accjacmax.html" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">📦</span> Supplementary Material + Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>LETICIO, G.; <b>VALEM, L. P.</b>; LOPES, L. T.; PEDRONETTE, D. C. G. pyUDLF: A Python Framework for Unsupervised Distance Learning Tasks. In: <b>31st ACM International Conference on Multimedia (ACM MM)</b>; 2023.
+                        <br>
+                        <a href="https://doi.org/10.1145/3581783.3613466" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/UDLF/pyUDLF" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>PEREIRA-FERRERO, V. H.; <b>VALEM, L. P.</b>; LETICIO, G. R.; PEDRONETTE, D. C. G. Feature Fusion and Augmentation based on Manifold Ranking for Image Classification. In: <b>IEEE Sixth International Conference on Artificial Intelligence and Knowledge Engineering (AIKE)</b>; 2023.
+                        <br>
+                        <a href="https://doi.org/10.1109/aike59827.2023.00020" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p><b>VALEM, L. P.</b>; PEREIRA-FERRERO, V. H.; PEDRONETTE, D. C. G. Self-Supervised Regression for Query Performance Prediction on Image Retrieval. In: <b>IEEE Sixth International Conference on Artificial Intelligence and Knowledge Engineering (AIKE)</b>; 2023.
+                        <br>
+                        <a href="https://doi.org/10.1109/aike59827.2023.00023" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L. P.</b>; KAWAI, V. A. S.; PEREIRA-FERRERO, V. H. ; PEDRONETTE, D. C. G. . A Novel Rank Correlation Measure for Manifold Learning on Image Retrieval and Person Re-ID. In: IEEE International Conference on Image Processing (<b>ICIP</b>) , 2022.
                         <br>
-                        <a href="content/papers/conferences/ICIP-2022.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1109/ICIP46576.2022.9898060" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>
+                        <a href="content/papers/conferences/ICIP-2022.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1109/ICIP46576.2022.9898060" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
                 <li>
-                    <p>ALMEIDA, L. B. ; PEREIRA-FERRERO, V. H. ;  <b>VALEM, L. P.</b> ; ALMEIDA, J. ; PEDRONETTE, D. C. G. . Representation Learning for Image Retrieval through 3D CNN and Manifold Ranking. In: <b>SIBGRAPI Conference on Graphics, Patterns and Images</b>, 2021 (accepted, to appear).
+                    <p>ALMEIDA, L. B.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Graph Convolutional Networks and Manifold Ranking for Multimodal Video Retrieval. In: <b>IEEE International Conference on Image Processing (ICIP)</b>; 2022.
                         <br>
-                        <a href="https://doi.org/xx.xxxx" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>
+                        <a href="https://doi.org/10.1109/icip46576.2022.9897911" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
                 <li>
-                    <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . A Denoising Convolutional Neural Network for Self-Supervised Rank Effectiveness Estimation on Image Retrieval. In: ACM International Conference on Multimedia Retrieval (<b>ICMR</b>), 2021, Taipei - Taiwan.
+                    <p>ALMEIDA, L. B. ; PEREIRA-FERRERO, V. H. ;  <b>VALEM, L. P.</b> ; ALMEIDA, J. ; PEDRONETTE, D. C. G. . Representation Learning for Image Retrieval through 3D CNN and Manifold Ranking. In: <b>SIBGRAPI Conference on Graphics, Patterns and Images</b>, 2021.
                         <br>
-                        <a href="content/papers/conferences/ICMR-2021_DRNE.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1145/3460426.3463645" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/presentations/video_ICMR2021.mp4" target="_blank" class="btn btn-primary btn-xs"><b>Presentation</b></a>
+                        <a href="https://doi.org/10.1109/sibgrapi54419.2021.00063" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>DE SÁ, N. G.; <b>VALEM, L. P.</b>; PEDRONETTE, D. A Multi-level Rank Correlation Measure for Image Retrieval. In: <b>16th International Conference on Computer Vision Theory and Applications (VISAPP)</b>; 2021.
+                        <br>
+                        <a href="https://doi.org/10.5220/0010220903700378" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
                 <li>
                     <p>PRESOTTO, J. G. C.; <b>VALEM, L. P.</b>; de SÁ, N. G.; PEDRONETTE, D. C. G.; PAPA, J. P. . Weakly Supervised Learning through Rank-based Contextual Measures. In: 2020 25th International Conference on Pattern Recognition (<b>ICPR</b>), 2021, pp. 5752-5759.
                         <br>
-                        <a href="content/papers/conferences/ICPR-2020.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1109/ICPR48806.2021.9412596" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="https://ailb-web.ing.unimore.it/icpr/author/957" target="_blank" class="btn btn-primary btn-xs"><b>Paper Presentation</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/ICPR-2020.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF/WSEF/" target="_blank" class="btn btn-success btn-xs"><b>Download Code</b></a>
+                        <a href="content/papers/conferences/ICPR-2020.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1109/ICPR48806.2021.9412596" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="https://ailb-web.ing.unimore.it/icpr/author/957" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🎤</span> Paper Presentation</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/ICPR-2020.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/UDLF/WSEF/" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
-                    <p>LOPES, L. T. ; <b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. ; GUILHERME, I. R. ; PAPA, J. P. ; SANTANA, M. C. S. ; COLOMBO, D. . Manifold Learning-based Clustering Approach Applied to Anomaly Detection in Surveillance Videos. In: 15th International Conference on Computer Vision Theory and Applications (<b>VISAPP</b>), 2020, Valleta - Malta.
+                    <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . A Denoising Convolutional Neural Network for Self-Supervised Rank Effectiveness Estimation on Image Retrieval. In: ACM International Conference on Multimedia Retrieval (<b>ICMR</b>), 2021, Taipei - Taiwan.
                         <br>
-                        <a href="content/papers/conferences/VISAPP-2020_CRECKNN.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.5220/0008974604040412" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/VISAPP-2020_CRECKNN.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/lopes-leonardo/crecknn" target="_blank" class="btn btn-success btn-xs"><b>Download Code</b></a>
+                        <a href="content/papers/conferences/ICMR-2021_DRNE.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1145/3460426.3463645" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/presentations/video_ICMR2021.mp4" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🎤</span> Presentation</b></a>
                     </p>
                 </li>
                 <li>
                     <p>DE FERNANDO, F. A. ; PEDRONETTE, D. C. G. ; DE SOUSA, G. J. ; <b>VALEM, L. P.</b> ; GUILHERME, I. R. . RaDE: A Rank-based Graph Embedding Approach. In: 15th International Conference on Computer Vision Theory and Applications (<b>VISAPP</b>), 2020, Valleta - Malta.
                         <br>
-                        <a href="content/papers/conferences/VISAPP-2020_RADE.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.5220/0008985901420152" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/VISAPP-2020_RADE.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>
+                        <a href="content/papers/conferences/VISAPP-2020_RADE.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.5220/0008985901420152" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/VISAPP-2020_RADE.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/thcastilho/interpretable-embeddings" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>LOPES, L. T. ; <b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. ; GUILHERME, I. R. ; PAPA, J. P. ; SANTANA, M. C. S. ; COLOMBO, D. . Manifold Learning-based Clustering Approach Applied to Anomaly Detection in Surveillance Videos. In: 15th International Conference on Computer Vision Theory and Applications (<b>VISAPP</b>), 2020, Valleta - Malta.
+                        <br>
+                        <a href="content/papers/conferences/VISAPP-2020_CRECKNN.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.5220/0008974604040412" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/VISAPP-2020_CRECKNN.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/lopes-leonardo/crecknn" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . An Unsupervised Genetic Algorithm Framework for Rank Selection and Fusion on Image Retrieval. In: ACM International Conference on Multimedia Retrieval (<b>ICMR</b>), 2019, Ottawa - Canada.
                         <br>
-                        <a href="content/papers/conferences/ICMR-2019.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1145/3323873.3325022" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>
+                        <a href="content/papers/conferences/ICMR-2019.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1145/3323873.3325022" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>PRESOTTO, J. G. C.; <b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Unsupervised Effectiveness Estimation Through Intersection of Ranking References. In: <b>Computer Analysis of Images and Patterns (CAIP)</b>; 2019.
+                        <br>
+                        <a href="https://doi.org/10.1007/978-3-030-29891-3_21" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. ; BREVE, F. ; GUILHERME, I. R. . Manifold Correlation Graph for Semi-Supervised Learning. In: <b>IJCNN</b> IEEE WCCI, 2018, Rio de Janeiro - Brazil.
                         <br>
-                        <a href="content/papers/conferences/IJCNN-2018.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1109/IJCNN.2018.8489487" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/IJCNN-2018.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>
-                    </p>
-                </li>
-                <li>
-                    <p>ALMEIDA, J. ; <b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . A Rank Aggregation Framework for Video Interestingness Prediction. In: 9th International Conference on Image Analysis and Processing (<b>ICIAP</b>), 2017, Catania - Italy.
-                        <br>
-                        <a href="content/papers/conferences/ICIAP-2017.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1007/978-3-319-68560-1" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/ICIAP-2017.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>
-                    </p>
-                </li>
-                <li>
-                    <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . Selection and Combination of Unsupervised Learning Methods for Image Retrieval. In: 15th International Workshop on Content-Based Multimedia Indexing (<b>CBMI' 17</b>), 2017, Florence - Italy.
-                        <br>
-                        <a href="content/papers/conferences/CBMI-2017.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1145/3095713.3095741" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/CBMI-2017.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>
+                        <a href="content/papers/conferences/IJCNN-2018.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1109/IJCNN.2018.8489487" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/IJCNN-2018.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L P.</b> ; PEDRONETTE, D. C. G. . An Unsupervised Distance Learning Framework for Multimedia Retrieval. In: ACM International Conference on Multimedia Retrieval (<b>ICMR</b>), 2017, Bucharest - Romania.
                         <br>
-                        <a href="content/papers/conferences/ICMR-2017_UDLF.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://dl.acm.org/citation.cfm?doid=3078971.3079017" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/ICMR-2017_UDLF.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="http://www.ic.unicamp.br/~dcarlos/UDLF/index.html" target="_blank" class="btn btn-success btn-xs"><b>UDLF Official Page</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF" target="_blank" class="btn btn-success btn-xs"><b>UDLF on Github</b></a>
+                        <a href="content/papers/conferences/ICMR-2017_UDLF.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://dl.acm.org/citation.cfm?doid=3078971.3079017" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/ICMR-2017_UDLF.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="http://www.ic.unicamp.br/~dcarlos/UDLF/index.html" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">🌐</span> UDLF Official Page</b></a>&nbsp;&nbsp;
+                        <a href="https://github.com/UDLF" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> UDLF on Github</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . Selection and Combination of Unsupervised Learning Methods for Image Retrieval. In: 15th International Workshop on Content-Based Multimedia Indexing (<b>CBMI' 17</b>), 2017, Florence - Italy.
+                        <br>
+                        <a href="content/papers/conferences/CBMI-2017.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1145/3095713.3095741" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/CBMI-2017.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p>ALMEIDA, J. ; <b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . A Rank Aggregation Framework for Video Interestingness Prediction. In: 19th International Conference on Image Analysis and Processing (<b>ICIAP</b>), 2017, Catania - Italy.
+                        <br>
+                        <a href="content/papers/conferences/ICIAP-2017.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://doi.org/10.1007/978-3-319-68560-1_1" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/ICIAP-2017.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . Unsupervised Similarity Learning through Cartesian Product of Ranking References for Image Retrieval Tasks. In: <b>SIBGRAPI Conference on Graphics, Patterns and Images</b>, 2016, São José dos Campos - Brazil.
                         <br>
-                        <b>Best Paper Award</b>
+                        <b><span aria-hidden="true">🥇</span> Best Paper Award</b>
                         <br>
-                        <a href="content/papers/conferences/SIBGRAPI-2016_CPRR.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://dx.doi.org/10.1109/SIBGRAPI.2016.042" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/SIBGRAPI-2016_CPRR.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="http://www.ic.unicamp.br/~dcarlos/UDLF/releases.html" target="_blank" class="btn btn-success btn-xs"><b>Download Code</b></a>
+                        <a href="content/papers/conferences/SIBGRAPI-2016_CPRR.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://dx.doi.org/10.1109/SIBGRAPI.2016.042" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/SIBGRAPI-2016_CPRR.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="http://www.ic.unicamp.br/~dcarlos/UDLF/releases.html" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
                 <li>
                     <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. ; TORRES, R. da S. ; EDSON BORIN ; ALMEIDA, J. . Effective, Efficient, and Scalable Unsupervised Distance Learning in Image Retrieval Tasks. In: ACM International Conference on Multimedia Retrieval (<b>ICMR</b>), 2015, Shangai - China.
                         <br>
-                        <a href="content/papers/conferences/ICMR-2015_RLRecom.pdf" target="_blank" class="btn btn-primary btn-xs"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://dl.acm.org/citation.cfm?doid=2671188.2749336" target="_blank" class="btn btn-primary btn-xs"><b>Online Publication</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/ICMR-2015_RLRecom.bib" target="_blank" class="btn btn-warning btn-xs"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="http://www.ic.unicamp.br/~dcarlos/UDLF/releases.html" target="_blank" class="btn btn-success btn-xs"><b>Download Code</b></a>
+                        <a href="content/papers/conferences/ICMR-2015_RLRecom.pdf" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">📄</span> Pre-Print PDF</b></a>&nbsp;&nbsp;
+                        <a href="https://dl.acm.org/citation.cfm?doid=2671188.2749336" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>&nbsp;&nbsp;
+                        <a href="content/papers/conferences/ICMR-2015_RLRecom.bib" target="_blank" class="btn btn-warning btn-xs"><b><span aria-hidden="true">📋</span> Bibtex</b></a>&nbsp;&nbsp;
+                        <a href="http://www.ic.unicamp.br/~dcarlos/UDLF/releases.html" target="_blank" class="btn btn-success btn-xs"><b><span aria-hidden="true">💻</span> Download Code</b></a>
                     </p>
                 </li>
-            </ul>
+            
+            </ol>
+            <h4><b>Abstracts in Conference Proceedings:</b></h4>
+            <ol class="publication-list" style="list-style-type: decimal;">
+                <li>
+                    <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Contextual Similarity Learning for Image Retrieval and Classification: Applications in Person Re-Identification. In: <b>XXXVIII Concurso de Teses e Dissertações (CTD / SBC)</b>; 2025.
+                        <br>
+                        <a href="https://sol.sbc.org.br/index.php/ctd/article/view/36352" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Unsupervised Selective Rank Fusion for Content-based Image Retrieval. In: <b>XXXIII Concurso de Teses e Dissertações (CTD / SBC)</b>; 2020.
+                        <br>
+                        <a href="https://doi.org/10.5753/ctd.2020.11370" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Unsupervised Selective Rank Fusion on Content-Based Image Retrieval. In: <b>Anais Estendidos da XXXII Conference on Graphics, Patterns and Images (SIBGRAPI)</b>; 2019.
+                        <br>
+                        <a href="https://doi.org/10.5753/sibgrapi.est.2019.8303" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+                <li>
+                    <p><b>VALEM, L. P.</b>; PEDRONETTE, D. C. G. Método de Aprendizado Não Supervisionado Baseado no Produto Cartesiano de Rankings para Busca de Imagens. In: <b>36º Concurso de Trabalhos de Iniciação Científica (CTIC / CSBC)</b>; 2017.
+                        <br>
+                        <a href="https://sol.sbc.org.br/index.php/ctic/article/view/3238" target="_blank" class="btn btn-primary btn-xs"><b><span aria-hidden="true">🔗</span> Online Publication</b></a>
+                    </p>
+                </li>
+            </ol>
         </div>
         <hr>
         <div style="text-align:center">
