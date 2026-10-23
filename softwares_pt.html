@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,27 +10,137 @@
         <script src="js/jquery-latest.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/custom.css">
-        <script type="application/ld+json">
-        {
-            "@context": "http://schema.org/",
-            "@type": "SoftwareApplication",
-            "name": "Unsupervised Distance Learning Framework",
-            "alternateName": "UDLF",
-            "author": "Lucas Pascotti Valem and Daniel Carlos Guimarães Pedronette",
-            "applicationCategory": "Scientific Research, Information Retrieval, CBIR, Re-Ranking",
-            "operatingSystem": "Windows, GNU/Linux, MacOS, and others",
-            "publication": {
-                "@type": "PublicationEvent",
-                "name": "An Unsupervised Distance Learning Framework for Multimedia Retrieval",
-                "description": "In: ACM International Conference on Multimedia Retrieval (ICMR), 2017, Bucharest - Romania",
-                "url": "http://lucasvalem.com/content/papers/conferences/ICMR-2017_UDLF.pdf"
-            },
-            "url": "http://www.ic.unicamp.br/~dcarlos/UDLF",
-            "downloadUrl": "http://www.ic.unicamp.br/~dcarlos/UDLF/releases.html"
-        }
-        </script>
+        <link rel="stylesheet" href="css/custom.css?v=e1b881196d87">
         <title>Softwares - Lucas Pascotti Valem</title>
+        <style>
+            .software-list { padding-left: 22px; }
+            .software-list > li { margin-bottom: 24px; }
+            .software-list h4 { margin-bottom: 5px; line-height: 1.35; }
+            .software-list p { margin: 0 0 7px; }
+            .software-venue { color: #666; font-size: 13px; }
+            .software-links { display: flex; flex-wrap: wrap; gap: 6px; }
+            .software-links .btn { white-space: normal; text-align: left; }
+            .software-links .btn:focus-visible { outline: 2px solid #245580; outline-offset: 2px; }
+            .software-intro { margin-bottom: 20px; }
+            .software-content { overflow-wrap: break-word; }
+            @media (max-width: 767px) {
+                .content-block.software-content { width: auto !important; margin: 0 16px !important; }
+                .software-list { padding-left: 18px; }
+            }
+        </style>
+        <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Softwares - Lucas Pascotti Valem",
+    "inLanguage": "pt-BR",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "CLS + ROI Tokens",
+                    "description": "Recuperação de imagens de granularidade fina com tokens de registro do DINOv2 e regiões de interesse locais.",
+                    "codeRepository": "https://github.com/IdhcbIan/Augmenting_CLS_with_ROI_tokens"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "DGCG / DGCG+",
+                    "description": "Grafos de correlação de rankings para classificação semissupervisionada de imagens, com ponderação por vizinhança mútua no DGCG+.",
+                    "codeRepository": "https://github.com/Bagiel1/DGCGplus"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "D-GRaNDe",
+                    "description": "Classificação de imagens com GNNs que combinam grafos de correlação de rankings e normalização gaussiana do grau.",
+                    "codeRepository": "https://github.com/rduarte12/SIBGRAPI-2026-DGRANDE"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "BRID-G",
+                    "description": "Construção de grafos para GCNs que combina similaridade e diversidade de vizinhança para reduzir conexões redundantes.",
+                    "codeRepository": "https://github.com/Didiles/brid-g"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "SCOSS — SCOre-Stratified Selection",
+                    "description": "Seleção de coresets e combinação de classificadores para classificação de imagens com conjuntos de treinamento reduzidos.",
+                    "codeRepository": "https://github.com/PedroRochaDantas/SCOSS"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "Interpretable Embeddings — GRaCE, RaDE / RaDE+",
+                    "description": "Pacote Python para aprender representações contextuais interpretáveis a partir de rankings, para recuperação, agrupamento e classificação.",
+                    "codeRepository": "https://github.com/thcastilho/interpretable-embeddings"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 7,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "Contextual Contrastive Loss (CCL)",
+                    "description": "Implementação em PyTorch de uma função de perda contrastiva baseada na similaridade contextual de vizinhanças para classificação de imagens.",
+                    "codeRepository": "https://github.com/lucasPV/CCL"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 8,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "Unsupervised Distance Learning Framework (UDLF / pyUDLF)",
+                    "description": "Framework de aprendizado não supervisionado para reordenação e fusão de rankings, com interface Python via pyUDLF.",
+                    "codeRepository": "https://github.com/UDLF/UDLF"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 9,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "Weakly Supervised Experiments Framework (WSEF)",
+                    "description": "Classificação fracamente supervisionada com expansão do conjunto de treinamento por medidas contextuais baseadas em rankings.",
+                    "codeRepository": "https://github.com/UDLF/WSEF"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 10,
+                "item": {
+                    "@type": "SoftwareSourceCode",
+                    "name": "Unsupervised Selective Rank Fusion (USRF)",
+                    "description": "Seleção e combinação não supervisionadas de listas ranqueadas para recuperação de imagens.",
+                    "codeRepository": "https://github.com/UDLF/USRF"
+                }
+            }
+        ]
+    }
+}
+        </script>
     </head>
     <body>
         <div class="site-header" style="text-align:center">
@@ -62,55 +172,111 @@
                 });
             })();
         </script>
-        <div class="content-block" style="width: 95%; overflow: hidden; margin-left: 25px;">
+        <div class="content-block software-content" style="width: 95%; margin-left: 25px;">
             <h3><b>Softwares</b></h3>
-            <ul>
-                <li>
-                    <h4><b>Weakly Supervised Experiments Framework (WSEF)</b></h4>
-                    O WSEF é um software de código aberto desenvolvido e mantido pela nossa equipe de pesquisa.
-                    Tal framework emprega um modelo baseado em listas ranqueadas para expansão não supervisionada do conjunto de treinamento.
-                    Para mais informações, você pode consultar a nossa publicação e o código disponível.
-                    <br><br>
-                    <p>PRESOTTO, J. G. C.; <b>VALEM, L. P.</b>; de SÁ, N. G.; PEDRONETTE, D. C. G.; PAPA, J. P. . Weakly Supervised Learning through Rank-based Contextual Measures. In: 2020 25th International Conference on Pattern Recognition (<b>ICPR</b>), 2021, pp. 5752-5759.
-                    <div style="padding-top: 5px">
-                        <a href="content/papers/conferences/ICPR-2020.pdf" target="_blank" class="btn btn-primary btn-sm"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1109/ICPR48806.2021.9412596" target="_blank" class="btn btn-primary btn-sm"><b>Publicação Online</b></a>&nbsp;&nbsp;
-                        <a href="https://ailb-web.ing.unimore.it/icpr/author/957" target="_blank" class="btn btn-primary btn-sm"><b>Apresentação do Artigo</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/ICPR-2020.bib" target="_blank" class="btn btn-warning btn-sm"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF/WSEF/" target="_blank" class="btn btn-success btn-sm"><b>Código Disponível</b></a>
+            <p class="software-intro">Seleção de implementações públicas das publicações.</p>
+            <h4><b>Destaques recentes</b></h4>
+            <ul class="software-list">
+                <li id="cls-roi">
+                    <h4><b>CLS + ROI Tokens</b></h4>
+                    <p class="software-venue">SIBGRAPI 2026</p>
+                    <p>Recuperação de imagens de granularidade fina com tokens de registro do DINOv2 e regiões de interesse locais.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/IdhcbIan/Augmenting_CLS_with_ROI_tokens" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código</b></a>
+                        <a href="https://arxiv.org/abs/2610.10991" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Preprint</b></a>
                     </div>
                 </li>
-                <br>
-                <li>
-                    <h4><b>Unsupervised Selective Rank Fusion (USRF)</b></h4>
-                    O USRF é um software de código aberto que foi desenvolvido e é mantido por mim sob a orientação do Prof. Dr. Daniel C. G. Pedronette. É um framework para seleção e combinação de listas ranqueadas completamente não supervisionado.  Para mais informações, você pode consultar a nossa publicação e o código disponível.
-                    <br><br>
-                    <p><b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . Unsupervised Selective Rank Fusion for Image Retrieval Tasks. In: <b>Neurocomputing</b>; v. 377, p. 182-199, 2019.
-                    <div style="padding-top: 5px">
-                        <a href="content/papers/journals/paperUSRF.pdf" target="_blank" class="btn btn-primary btn-sm"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://doi.org/10.1016/j.neucom.2019.09.065" target="_blank" class="btn btn-primary btn-sm"><b>Publicação Online</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/journals/paperUSRF.bib" target="_blank" class="btn btn-warning btn-sm"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF/USRF/" target="_blank" class="btn btn-success btn-sm"><b>Código Disponível</b></a>
+                <li id="dgcg">
+                    <h4><b>DGCG / DGCG+</b></h4>
+                    <p class="software-venue">Pattern Recognition Letters 2026 · SIBGRAPI 2025</p>
+                    <p>Grafos de correlação de rankings para classificação semissupervisionada de imagens, com ponderação por vizinhança mútua no DGCG+.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/Bagiel1/DGCGplus" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código DGCG+</b></a>
+                        <a href="https://github.com/Bagiel1/DGCG" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código DGCG</b></a>
+                        <a href="https://doi.org/10.1016/j.patrec.2026.09.012" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo 2026</b></a>
+                        <a href="https://doi.org/10.1109/SIBGRAPI67909.2025.11223391" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo 2025</b></a>
                     </div>
                 </li>
-                <br>
-                <li>
-                    <h4><b>Unsupervised Distance Learning Framework (UDLF)</b></h4>
-                    O UDLF é um software de código aberto que foi desenvolvido e é mantido por mim sob a orientação do Prof. Dr. Daniel C. G. Pedronette.
-                    Atualmente, o framework disponibiliza a implementação de 10 métodos de aprendizado não supervisionado para pós-processamento de resultados de recuperação (busca) de imagens.
-                    Você pode consultar a publicação e a página oficial do software para mais informações.
-                    <br><br>
-                    <b>VALEM, L. P.</b> ; PEDRONETTE, D. C. G. . An Unsupervised Distance Learning Framework for Multimedia Retrieval. In: International Conference on Multimedia Retrieval (<b>ICMR</b>), 2017.
-                    <div style="padding-top: 5px">
-                        <a href="content/papers/conferences/ICMR-2017_UDLF.pdf" target="_blank" class="btn btn-primary btn-sm"><b>Pre-Print PDF</b></a>&nbsp;&nbsp;
-                        <a href="https://dl.acm.org/citation.cfm?doid=3078971.3079017" target="_blank" class="btn btn-primary btn-sm"><b>Publicação Online</b></a>&nbsp;&nbsp;
-                        <a href="content/papers/conferences/ICMR-2017_UDLF.bib" target="_blank" class="btn btn-warning btn-sm"><b>Bibtex</b></a>&nbsp;&nbsp;
-                        <a href="http://www.ic.unicamp.br/~dcarlos/UDLF/index.html" target="_blank" class="btn btn-success btn-sm"><b>Página Oficial do UDLF</b></a>&nbsp;&nbsp;
-                        <a href="https://github.com/UDLF" target="_blank" class="btn btn-success btn-sm"><b>UDLF no Github</b></a>
+                <li id="dgrande">
+                    <h4><b>D-GRaNDe</b></h4>
+                    <p class="software-venue">SIBGRAPI 2026</p>
+                    <p>Classificação de imagens com GNNs que combinam grafos de correlação de rankings e normalização gaussiana do grau.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/rduarte12/SIBGRAPI-2026-DGRANDE" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código</b></a>
+                        <a href="https://sibgrapi.sid.inpe.br/col/sid.inpe.br/sibgrapi/2026/09.04.04.10/doc/duarte-64-inpe.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo</b></a>
+                    </div>
+                </li>
+                <li id="brid-g">
+                    <h4><b>BRID-G</b></h4>
+                    <p class="software-venue">SIBGRAPI 2026</p>
+                    <p>Construção de grafos para GCNs que combina similaridade e diversidade de vizinhança para reduzir conexões redundantes.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/Didiles/brid-g" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código</b></a>
+                        <a href="https://sibgrapi.sid.inpe.br/col/sid.inpe.br/sibgrapi/2026/09.04.03.59/doc/giaretta-53-inpe.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo</b></a>
+                    </div>
+                </li>
+                <li id="scoss">
+                    <h4><b>SCOSS — SCOre-Stratified Selection</b></h4>
+                    <p class="software-venue">WTAG / SBBD 2026</p>
+                    <p>Seleção de coresets e combinação de classificadores para classificação de imagens com conjuntos de treinamento reduzidos.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/PedroRochaDantas/SCOSS" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código</b></a>
+                        <a href="https://sol.sbc.org.br/index.php/sbbd_estendido/article/view/44107" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo</b></a>
+                    </div>
+                </li>
+                <li id="grace">
+                    <h4><b>Interpretable Embeddings — GRaCE, RaDE / RaDE+</b></h4>
+                    <p class="software-venue">IJCNN 2025 · IJIM Data Insights 2022 · VISAPP 2020</p>
+                    <p>Pacote Python para aprender representações contextuais interpretáveis a partir de rankings, para recuperação, agrupamento e classificação.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/thcastilho/interpretable-embeddings" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código</b></a>
+                        <a href="https://pypi.org/project/interpretable-embeddings/" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">📦</span> PyPI</b></a>
+                        <a href="https://doi.org/10.1109/IJCNN64981.2025.11229362" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo GRaCE</b></a>
+                    </div>
+                </li>
+                <li id="ccl">
+                    <h4><b>Contextual Contrastive Loss (CCL)</b></h4>
+                    <p class="software-venue">ISVC 2024</p>
+                    <p>Implementação em PyTorch de uma função de perda contrastiva baseada na similaridade contextual de vizinhanças para classificação de imagens.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/lucasPV/CCL" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código</b></a>
+                        <a href="https://doi.org/10.1007/978-3-031-77392-1_5" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo</b></a>
+                    </div>
+                </li>
+            </ul>
+            <h4><b>Frameworks</b></h4>
+            <ul class="software-list">
+                <li id="udlf">
+                    <h4><b>Unsupervised Distance Learning Framework (UDLF / pyUDLF)</b></h4>
+                    <p class="software-venue">ACM MM 2023 · ICMR 2017</p>
+                    <p>Framework de aprendizado não supervisionado para reordenação e fusão de rankings, com interface Python via pyUDLF.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/UDLF/UDLF" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código UDLF</b></a>
+                        <a href="https://github.com/UDLF/pyUDLF" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código pyUDLF</b></a>
+                        <a href="https://doi.org/10.1145/3581783.3613466" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo pyUDLF</b></a>
+                        <a href="https://doi.org/10.1145/3078971.3079017" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo UDLF</b></a>
                     </div>
                     <div style="padding-top: 15px">
-                            <img src="pics/oxford17flowers.jpg" alt="Example of Ranked List" style="padding-bottom: 5px">
-                            <img src="pics/corel5k.jpg" alt="Example of Ranked List" style="padding-bottom: 5px">
+                            <img src="pics/oxford17flowers.jpg" alt="Exemplo de lista ranqueada" style="padding-bottom: 5px; max-width: 100%; height: auto;">
+                            <img src="pics/corel5k.jpg" alt="Exemplo de lista ranqueada" style="padding-bottom: 5px; max-width: 100%; height: auto;">
+                    </div>
+                </li>
+                <li id="wsef">
+                    <h4><b>Weakly Supervised Experiments Framework (WSEF)</b></h4>
+                    <p class="software-venue">ICPR 2020 / 2021</p>
+                    <p>Classificação fracamente supervisionada com expansão do conjunto de treinamento por medidas contextuais baseadas em rankings.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/UDLF/WSEF" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código</b></a>
+                        <a href="https://doi.org/10.1109/ICPR48806.2021.9412596" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo</b></a>
+                    </div>
+                </li>
+                <li id="usrf">
+                    <h4><b>Unsupervised Selective Rank Fusion (USRF)</b></h4>
+                    <p class="software-venue">Neurocomputing 2020</p>
+                    <p>Seleção e combinação não supervisionadas de listas ranqueadas para recuperação de imagens.</p>
+                    <div class="software-links">
+                        <a href="https://github.com/UDLF/USRF" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm"><b><span aria-hidden="true">💻</span> Código</b></a>
+                        <a href="https://doi.org/10.1016/j.neucom.2019.09.065" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><b><span aria-hidden="true">📄</span> Artigo</b></a>
                     </div>
                 </li>
             </ul>
