@@ -158,3 +158,201 @@
 #cssmenu > ul > li.has-sub > a:hover:before {
   border-top: 5px solid #ffffff;
 }
+
+/* =========================================================
+   Mobile / tablet layout
+   Desktop rendering is unchanged; everything below only
+   applies on narrower screens.
+   ========================================================= */
+
+/* bootstrap.css fixes body at 1000px; let it shrink on smaller screens */
+@media (max-width: 999px) {
+  body {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+/* Toggle button is hidden on desktop */
+#cssmenu .menu-toggle {
+  display: none;
+}
+
+/* ---- Tablet & phone: collapsible menu (menu no longer fits in one row) ---- */
+@media (max-width: 991px) {
+  #cssmenu {
+    height: auto;
+    margin: 0 12px;
+    overflow: hidden;
+  }
+  #cssmenu .menu-toggle {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: none;
+    text-align: left;
+    color: #ffffff;
+    font: 700 14px Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    padding: 14px 16px;
+    cursor: pointer;
+  }
+  #cssmenu .menu-toggle:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: -4px;
+  }
+  /* hamburger icon (three bars) */
+  #cssmenu .menu-bars,
+  #cssmenu .menu-bars:before,
+  #cssmenu .menu-bars:after {
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 1px;
+    vertical-align: middle;
+    transition: transform .2s ease, background .2s ease;
+  }
+  #cssmenu .menu-bars {
+    margin: -3px 10px 0 0;
+  }
+  #cssmenu .menu-bars:before,
+  #cssmenu .menu-bars:after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  #cssmenu .menu-bars:before { top: -6px; }
+  #cssmenu .menu-bars:after  { top: 6px; }
+  #cssmenu.open .menu-bars { background: transparent; }
+  #cssmenu.open .menu-bars:before { transform: translateY(6px) rotate(45deg); }
+  #cssmenu.open .menu-bars:after  { transform: translateY(-6px) rotate(-45deg); }
+
+  #cssmenu > ul {
+    display: none;
+    border-top: 1px solid #080808;
+  }
+  #cssmenu.open > ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #cssmenu > ul > li {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+  #cssmenu > ul > li > a {
+    text-align: left;
+    border-right: 0;
+    border-bottom: 1px solid #080808;
+    box-shadow: inset 0 1px 0 #3c3c3c;
+    padding: 14px 16px;
+  }
+  #cssmenu > ul > li:first-child > a {
+    border-radius: 0;
+  }
+  #cssmenu > ul > li > a:after {
+    display: none;
+  }
+  #cssmenu > ul > li > a img {
+    margin-right: 6px;
+  }
+  /* language flags share one row at the bottom */
+  #cssmenu > ul > li.lang {
+    width: 50%;
+  }
+  #cssmenu > ul > li.lang > a {
+    text-align: center;
+    border-bottom: 0;
+  }
+  #cssmenu > ul > li.lang + li.lang > a {
+    border-left: 1px solid #080808;
+  }
+
+  /* Home: institution / fellowship logos stack */
+  .logos-left,
+  .logos-right {
+    float: none !important;
+    width: auto !important;
+    margin: 0 25px 15px !important;
+  }
+}
+
+/* ---- Phone ---- */
+@media (max-width: 767px) {
+  body {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  .site-header {
+    padding: 0 16px;
+  }
+  .site-header h3 {
+    font-size: 21px;
+    margin-bottom: 6px;
+  }
+
+  /* Main content blocks: drop fixed widths / big left margins */
+  .content-block {
+    width: auto !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+  .row-block {
+    width: auto !important;
+  }
+
+  /* Home: photo above the text */
+  .about-photo {
+    float: none !important;
+    width: auto !important;
+    margin: 0 16px 16px !important;
+    text-align: center;
+  }
+  .about-photo img {
+    width: 200px;
+    max-width: 70%;
+    height: auto;
+  }
+  .about-text {
+    margin: 0 16px !important;
+  }
+
+  .logos-left,
+  .logos-right {
+    margin: 0 16px 15px !important;
+  }
+
+  /* Images inside content never overflow the screen */
+  .content-block img,
+  .row-block img {
+    max-width: 100%;
+    height: auto;
+  }
+  .row-block .logos-left img {
+    max-width: 45%;
+  }
+  .row-block .logos-right img {
+    max-width: 30%;
+  }
+
+  /* Lists: less indentation on narrow screens */
+  .content-block ul,
+  .content-block ol {
+    padding-left: 20px;
+  }
+
+  /* Buttons wrap neatly onto multiple lines */
+  .content-block .btn,
+  .about-text .btn {
+    margin-bottom: 6px;
+    white-space: normal;
+  }
+
+  .site-footer {
+    padding: 0 16px 16px;
+    font-size: 13px;
+  }
+}

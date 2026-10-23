@@ -14,13 +14,14 @@
         <title>Contato - Lucas Pascotti Valem</title>
     </head>
     <body>
-        <div style="text-align:center">
+        <div class="site-header" style="text-align:center">
             <h3><b>LUCAS PASCOTTI VALEM</b></h3>
             Professor Doutor na Universidade de São Paulo - SCC / ICMC / USP
         </div>
         <br>
         <div id='cssmenu'>
-            <ul>
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-list"><span class="menu-bars" aria-hidden="true"></span> Menu</button>
+            <ul id="menu-list">
                 <li><a href='index_pt'><span><img src="icons/home.png" alt=""> Home</span></a></li>
                 <li class='last'><a href='publications_pt'><span><img src="icons/publications.png" alt=""> Publicações</span></a></li>
                 <li class='last'><a href='projects_pt'><span><img src="icons/projects.png" alt=""> Projetos</span></a></li>
@@ -28,18 +29,28 @@
                 <li class='last'><a href='awards_pt'><span><img src="icons/awards.png" alt=""> Prêmios</span></a></li>
                 <li class='last'><a href='curriculum_pt'><span><img src="icons/curriculum.png" alt=""> Currículo</span></a></li>
                 <li class='last'><a href='contact_pt'><span><img src="icons/contact.png" alt=""> Contato</span></a></li>
-                <li class='last'><a href='contact_pt'><span><img src="icons/brazil.png" alt=""></span></a></li>
-                <li class='last'><a href='contact'><span><img src="icons/usa.png" alt=""></span></a></li>
+                <li class='last lang'><a href='contact_pt'><span><img src="icons/brazil.png" alt=""></span></a></li>
+                <li class='last lang'><a href='contact'><span><img src="icons/usa.png" alt=""></span></a></li>
             </ul>
         </div>
-        <div style="width: 95%; overflow: hidden; margin-left: 25px;">
+        <script>
+            (function () {
+                var menu = document.getElementById('cssmenu');
+                var btn = menu.querySelector('.menu-toggle');
+                btn.addEventListener('click', function () {
+                    var open = menu.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            })();
+        </script>
+        <div class="content-block" style="width: 95%; overflow: hidden; margin-left: 25px;">
             <h3><b>Contato</b></h3>
             <p>Você pode entrar em contato comigo por um dos emails abaixo:<br>
                 <i><b>lucaspascottivalem@gmail.com</b></i> ou <i><b>lucas.valem@unesp.br</b></i>
             </p>
         </div>
         <hr>
-        <div style="text-align:center">
+        <div class="site-footer" style="text-align:center">
             © Copyright 2026, Lucas Pascotti Valem.
         </div>
     </body>

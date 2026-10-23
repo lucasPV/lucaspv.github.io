@@ -14,13 +14,14 @@
         <title>News - Lucas Pascotti Valem</title>
     </head>
     <body>
-        <div style="text-align:center">
+        <div class="site-header" style="text-align:center">
             <h3><b>LUCAS PASCOTTI VALEM</b></h3>
             Assistant Professor at the University of São Paulo - SCC / ICMC / USP
         </div>
         <br>
         <div id='cssmenu'>
-            <ul>
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-list"><span class="menu-bars" aria-hidden="true"></span> Menu</button>
+            <ul id="menu-list">
                 <li><a href='index'><span><img src="icons/home.png" alt=""> Home</span></a></li>
                 <li class='last'><a href='publications'><span><img src="icons/publications.png" alt=""> Publications</span></a></li>
                 <li class='last'><a href='projects'><span><img src="icons/projects.png" alt=""> Projects</span></a></li>
@@ -30,13 +31,23 @@
                 <li class='last'><a href='contact'><span><img src="icons/contact.png" alt=""> Contact</span></a></li>
             </ul>
         </div>
-        <div style="width: 100%; overflow: hidden; margin-left: 25px;">
+        <script>
+            (function () {
+                var menu = document.getElementById('cssmenu');
+                var btn = menu.querySelector('.menu-toggle');
+                btn.addEventListener('click', function () {
+                    var open = menu.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            })();
+        </script>
+        <div class="content-block" style="width: 100%; overflow: hidden; margin-left: 25px;">
             <h3><b>News</b></h3>
             <p>Please visit my blog to find the most recent news on my research.</p>
             <a href="http://blog.lucasvalem.com" target="_blank" class="btn btn-primary btn-sm"><b>Go to Blog</b></a>
         </div>
         <hr>
-        <div style="text-align:center">
+        <div class="site-footer" style="text-align:center">
             © Copyright 2026, Lucas Pascotti Valem.
         </div>
     </body>

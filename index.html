@@ -53,13 +53,14 @@
         <title>Home - Lucas Pascotti Valem</title>
     </head>
     <body>
-        <div style="text-align:center">
+        <div class="site-header" style="text-align:center">
             <h3><b>LUCAS PASCOTTI VALEM</b></h3>
             Assistant Professor at the University of São Paulo - SCC / ICMC / USP
         </div>
         <br>
         <div id='cssmenu'>
-            <ul>
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-list"><span class="menu-bars" aria-hidden="true"></span> Menu</button>
+            <ul id="menu-list">
                 <li><a href='index'><span><img src="icons/home.png" alt=""> Home</span></a></li>
                 <li class='last'><a href='publications'><span><img src="icons/publications.png" alt=""> Publications</span></a></li>
                 <li class='last'><a href='projects'><span><img src="icons/projects.png" alt=""> Projects</span></a></li>
@@ -67,18 +68,28 @@
                 <li class='last'><a href='awards'><span><img src="icons/awards.png" alt=""> Awards</span></a></li>
                 <li class='last'><a href='curriculum'><span><img src="icons/curriculum.png" alt=""> Curriculum</span></a></li>
                 <li class='last'><a href='contact'><span><img src="icons/contact.png" alt=""> Contact</span></a></li>
-                <li class='last'><a href='index_pt'><span><img src="icons/brazil.png" alt=""></span></a></li>
-                <li class='last'><a href='index'><span><img src="icons/usa.png" alt=""></span></a></li>
+                <li class='last lang'><a href='index_pt'><span><img src="icons/brazil.png" alt=""></span></a></li>
+                <li class='last lang'><a href='index'><span><img src="icons/usa.png" alt=""></span></a></li>
             </ul>
         </div>
-        <div style="width: 100%; overflow: hidden; margin-left: 25px;">
+        <script>
+            (function () {
+                var menu = document.getElementById('cssmenu');
+                var btn = menu.querySelector('.menu-toggle');
+                btn.addEventListener('click', function () {
+                    var open = menu.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            })();
+        </script>
+        <div class="content-block" style="width: 100%; overflow: hidden; margin-left: 25px;">
             <h3><b>About Me</b></h3>
         </div>
-        <div style="width: 100%; overflow: hidden;">
-            <div style="width: 200px; float: left; margin-left: 25px;">
+        <div class="row-block" style="width: 100%; overflow: hidden;">
+            <div class="about-photo" style="width: 200px; float: left; margin-left: 25px;">
                 <img src="pics/photo.jpg" alt="Lucas Pascotti Valem">
             </div>
-            <div style="margin-left: 300px; margin-right: 30px;">
+            <div class="about-text" style="margin-left: 300px; margin-right: 30px;">
 	<p>I currently work as an <b>Assistant Professor</b> in the Department of <b>Computer Science</b> (<b>SCC</b>) at the Institute of Mathematics and Computer Science (<b>ICMC</b>), University of São Paulo (<b>USP</b>).</p>
 
 	<p>From July 2023 to January 2025, I worked on a project funded by Petrobras, focused on developing software that uses AI to automatically detect and classify microfossils in thin sections of rocks.</p>
@@ -110,14 +121,14 @@
         </div>
 
         <hr>
-        <div style="width: 100%; overflow: hidden;">
-            <div style="width: 425px; float: left; margin-left: 25px;">
+        <div class="row-block" style="width: 100%; overflow: hidden;">
+            <div class="logos-left" style="width: 425px; float: left; margin-left: 25px;">
                 <p><b>Professor at SCC / ICMC / USP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Education</b></p>
                 <a href="https://www.icmc.usp.br/en/"><img src="pics/icmc.jpg" alt="ICMC-USP"></a>
                 &nbsp;&nbsp;&nbsp;
                 <a href="https://www.unesp.br/international"><img src="pics/unesp_temple.png" alt="UNESP"></a>
             </div>
-            <div style="margin-left: 500px;">
+            <div class="logos-right" style="margin-left: 500px;">
                 <p><b>Current and Past Fellowships</b></p>
                 <a href="https://fulbright.org/"><img src="pics/fulbright.png" alt="FULBRIGHT"></a>
                 &nbsp;
@@ -127,7 +138,7 @@
             </div>
         </div>
         <hr>
-        <div style="text-align:center">
+        <div class="site-footer" style="text-align:center">
             © Copyright 2026, Lucas Pascotti Valem.
         </div>
     </body>
